@@ -3,13 +3,74 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Интернет-магазин Drink2Go</title>
+  <meta name="description" content="Drink2Go – интернет-магазин по продаже кофейных напитков">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
+  <header class="main-header">
+    <nav class="main-header__navigation main-navigation">
+      <a class="main-navigation__logo logo" href="/">
+        <img class="image" src="#" width="32" height="36" alt="Логотип магазина Drink2Go.">
+      </a>
+      <ul class="main-navigation__user-menu user-menu reset-list">
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <svg class="user-menu__icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use href="#" />
+            </svg>
+            <span class="user-menu__login-text">Войти</span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">
+            <svg class="user-menu__icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use href="#" />
+            </svg>
+            <span class="user-menu__cart-text">Корзина</span>
+          </a>
+      </ul>
+      <button class="main-navigation__toggle toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="toggle__button"></span>
+      </button>
+      <ul class="main-navigation__main-menu main-menu reset-list">
+        <li class="main-menu__item">
+          <a class="main-menu__link main-menu__link--current" href="#">Главная</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="delivery.html">Доставка</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="about.html">О нас</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1 class="visually-hidden">Drink2Go&nbsp;&mdash; интернет-магазин по&nbsp;продаже кофейных напитков</h1>
+    <section class="main-hero swiper">
+      <h2 class="visually-hidden">Новые товары</h2>
+      <ul class="main-hero__slider slider swiper-wrapper">
+        <li class="slider__item slide swiper-slide">
+          <img class="image" src="#" width="280" height="280" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
+          <span class="slide__badge">Новинка!</span>
+          <h3 class="slide__title">Декаф Флэт Уайт</h3>
+          <p class="slide__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <span class="slider__price slider__price--old">295₽</span>
+          <b class="slider__price">225₽</b>
+          <a class="slider__order" href="#">Заказать</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
 
   <script src="./js/script.js" defer></script>
 </body>
