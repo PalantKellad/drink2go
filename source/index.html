@@ -63,11 +63,128 @@
           <span class="slide__badge">Новинка!</span>
           <h3 class="slide__title">Декаф Флэт Уайт</h3>
           <p class="slide__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <span class="slider__price slider__price--old">295₽</span>
+          <del class="slider__price slider__price--old">295₽</del>
           <b class="slider__price">225₽</b>
           <a class="slider__order" href="#">Заказать</a>
         </li>
       </ul>
+    </section>
+    <section class="accomplishments">
+      <h2 class="main-content__title">Преимущества</h2>
+      <p class="main-content__subtitle">Главные причины выбрать Drink2Go</p>
+      <dl class="accomplishments__list features-list reset-list">
+        <dt class="feature-list__title">Скорость</dt>
+        <dd class="feature-list__description">Готовый напиток всегда под рукой&nbsp;&mdash; просто открой банку</dd>
+        <dt class="feature-list__title">Удобство</dt>
+        <dd class="feature-list__description">Легко помещается и&nbsp;в&nbsp;карман, и&nbsp;в&nbsp;маленькую сумочку</dd>
+        <dt class="feature-list__title">Бодрость</dt>
+        <dd class="feature-list__description">Сбалансированная доза кофеина даст мощный заряд энергии</dd>
+        <dt class="feature-list__title">Экологичность</dt>
+        <dd class="feature-list__description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</dd>
+      </dl>
+    </section>
+    <section class="catalog">
+      <h2 class="main-content__title">Каталог</h2>
+      <p class="main-content__subtitle">Каталог кофейных напитков</p>
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filter__item" aria-label="Фильтр по цене.">
+          <h3 class="filter__title">Цена</h3>
+          <div class="filter__container filter__container--range">
+            <div class="filter__scale">
+              <div class="filter__bar">
+                <button class="filter__toggle filter__toggle--min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="filter__toggle filter__toggle--max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <label class="filter__label"><span>Минимальная цена</span>
+            <input class="filter__select" type="number" value="0" name="min-price" tabindex="-1">
+          </label>
+          <label class="filter__label"><span>Максимальная цена</span>
+            <input class="filter__select" type="number" value="900" name="max-price" tabindex="-1">
+          </label>
+        </fieldset>
+        <fieldset class="filter__item" aria-label="Фильтр по наличию молока.">
+          <h3 class="filter__title">Наличие молока</h3>
+          <ul class="filter__container filter__container--checks reset-list">
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="no-matter" checked>
+                <span class="filter__check filter__check--radio"></span>
+                <span class="filter__value">Не важно</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="animal-milk">
+                <span class="filter__check filter__check--radio"></span>
+                <span class="filter__value">Только животное</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="plant-milk">
+                <span class="filter__check filter__check--radio"></span>
+                <span class="filter__value">Только растительное</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="no-milk" disabled>
+                <span class="filter__check filter__check--radio"></span>
+                <span class="filter__value">Без молока</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__item" aria-label="Фильтр по стране.">
+          <h3 class="filter__title">Страна произрастания</h3>
+          <ul class="filter__container filter__container--checks reset-list">
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="checkbox" name="Brasil" checked>
+                <span class="filter__check filter__check--box"></span>
+                <span class="filter__value">Бразилия</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="checkbox" name="Ethiopia">
+                <span class="filter__check filter__check--box"></span>
+                <span class="filter__value">Эфиопия</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="checkbox" name="Colombia">
+                <span class="filter__check filter__check--box"></span>
+                <span class="filter__value">Колумбия</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="checkbox" name="Costa-Rica">
+                <span class="filter__check filter__check--box"></span>
+                <span class="filter__value">Коста-Рика</span>
+              </label>
+            </li>
+            <li>
+              <label class="filter__label filter__label--checks">
+                <input class="filter__input visually-hidden" type="checkbox" name="Peru" disabled>
+                <span class="filter__check filter__check--box"></span>
+                <span class="filter__value">Перу</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filter__button button button--apply" type="submit">Применить фильтр</button>
+        <button class="filter__button button button--reset" type="reset">Сбросить фильтр</button>
+      </form>
+
     </section>
 
   </main>
