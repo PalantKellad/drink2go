@@ -1,8 +1,20 @@
 @forward "fonts.scss";
 @forward "visually-hidden.scss";
+@forward "mixins.scss";
+@forward "reset-list.scss";
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --page-background: #ffffff;
+  --base-light: #ffffff;
+  --base-neutral: #bdbdbd;
+  --base-dark: #333333;
+  --base-primary: #7859cf;
+  --base-secondary: #f0ebff;
+  --background-warm: #f3ebe1;
 }

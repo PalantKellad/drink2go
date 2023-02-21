@@ -1,0 +1,7 @@
+@mixin fonter($weight: 400, $size: 16px, $line: 24px) {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}

@@ -1,0 +1,29 @@
+@use "../global/global.scss";
+
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-navigation__logo {
+  margin-right: auto;
+  padding: 12px 20px;
+}
+
+.main-navigation__title {
+  font-size: 0;
+}
+
+.main-navigation__user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.main-navigation__main-menu {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0;
+  border-top: 1px solid var(--base-secondary);
+}

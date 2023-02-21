@@ -1,0 +1,21 @@
+@use "../global/global.scss";
+
+.user-menu {
+ display: flex;
+}
+
+.user-menu__login-text {
+  font-size: 0;
+}
+
+.user-menu__cart-text {
+  font-size: 0;
+}
+
+.user-menu__link {
+  display: flex;
+  place-items: center;
+  padding: 22px;
+  color: inherit;
+  text-decoration: none;
+}
