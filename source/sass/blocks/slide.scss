@@ -1,0 +1,49 @@
+@use "../global/global.scss";
+
+.slide {
+  display: grid;
+  justify-items: center;
+  padding: 20px 20px 60px;
+}
+
+.slide__image-container {
+  order: -2;
+  margin-bottom: 10px;
+}
+
+.slide__title {
+  margin: 0;
+  margin-bottom: 10px;
+  @include global.fonter(700, 36px, 48px);
+  text-align: center;
+}
+
+.slide__badge {
+  order: -1;
+  @include global.fonter(700, 12px, 16px);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--base-primary);
+}
+
+.slide__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.slide__order {
+  display: flex;
+  align-items: center;
+}
+
+.slide__price {
+  display: block;
+  margin-right: 20px;
+  @include global.fonter(600, 20px, 32px);
+
+  &--old {
+    margin-right: 6px;
+    @include global.fonter(400, 16px, 32px);
+    color: var(--base-primary);
+  }
+}

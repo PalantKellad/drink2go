@@ -69,75 +69,81 @@
       <h2 class="visually-hidden">Новые товары</h2>
       <ul class="main-hero__slider slider swiper-wrapper reset-list">
         <li class="slider__item slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/flat-white-big.webp 1x, img/main-hero/flat-white-big@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/flat-white-medium.webp 1x, img/main-hero/flat-white-medium@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/flat-white-small.webp 1x, img/main-hero/flat-white-small@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/main-hero/flat-white-big.jpg 1x, img/main-hero/flat-white-big@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-hero/flat-white-medium.jpg 1x, img/main-hero/flat-white-medium@2x.jpg 2x">
-            <source media="(min-width: 320px)" srcset="img/main-hero/flat-white-small.jpg 1x, img/main-hero/flat-white-small@2x.jpg 2x">
-            <img class="image" src="img/main-hero/flat-white-small.jpg" width="280" height="280" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
-          </picture>
-          <span class="slide__badge">Новинка!</span>
+          <div class="slide__image-container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/flat-white-big.webp 1x, img/main-hero/flat-white-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/flat-white-medium.webp 1x, img/main-hero/flat-white-medium@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/flat-white-small.webp 1x, img/main-hero/flat-white-small@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/main-hero/flat-white-big.jpg 1x, img/main-hero/flat-white-big@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-hero/flat-white-medium.jpg 1x, img/main-hero/flat-white-medium@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="img/main-hero/flat-white-small.jpg 1x, img/main-hero/flat-white-small@2x.jpg 2x">
+              <img class="image" src="img/main-hero/flat-white-small.jpg" width="280" height="280" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
+            </picture>
+          </div>
           <h3 class="slide__title">Декаф Флэт Уайт</h3>
+          <b class="slide__badge">Новинка!</b>
           <p class="slide__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно для расслабления после тяжёлого рабочего дня</p>
           <div class="slide__order">
-            <del class="slider__price slider__price--old">295₽</del>
-            <b class="slider__price">225₽</b>
-            <a class="slider__order" href="#">Заказать</a>
-          </div>
-        </li>
-        <!-- <li class="slider__item slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/lavender-big.webp 1x, img/main-hero/lavender-big@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/lavender-medium.webp 1x, img/main-hero/lavender-medium@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/lavender-small.webp 1x, img/main-hero/lavender-small@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/main-hero/lavender-big.jpg 1x, img/main-hero/lavender-big@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-hero/lavender-medium.jpg 1x, img/main-hero/lavender-medium@2x.jpg 2x">
-            <source media="(min-width: 320px)" srcset="img/main-hero/lavender-small.jpg 1x, img/main-hero/lavender-small@2x.jpg 2x">
-            <img class="image" src="img/main-hero/lavender-small.jpg" width="280" height="280" alt="Алюминиевая банка лавандового цвета в полоску с напитком lavender Latte.">
-          </picture>
-          <span class="slide__badge">Новинка!</span>
-          <h3 class="slide__title">Лавандовый Латте</h3>
-          <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных гор</p>
-          <div class="slide__order">
-            <del class="slider__price slider__price--old">285₽</del>
-            <b class="slider__price">265₽</b>
-            <a class="slider__order" href="#">Заказать</a>
+            <del class="slide__price slide__price--old">295₽</del>
+            <b class="slide__price">225₽</b>
+            <a class="slide__button button" href="#">Заказать</a>
           </div>
         </li>
         <li class="slider__item slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/espresso-big.webp 1x, img/main-hero/espresso-big@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/espresso-medium.webp 1x, img/main-hero/espresso-medium@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/espresso-small.webp 1x, img/main-hero/espresso-small@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/main-hero/espresso-big.jpg 1x, img/main-hero/espresso-big@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-hero/espresso-medium.jpg 1x, img/main-hero/espresso-medium@2x.jpg 2x">
-            <source media="(min-width: 320px)" srcset="img/main-hero/espresso-small.jpg 1x, img/main-hero/espresso-small@2x.jpg 2x">
-            <img class="image" src="img/main-hero/espresso-small.jpg" width="280" height="280" alt="Алюминиевая банка чёрного цвета в полоску с напитком Triple Espresso.">
-          </picture>
-          <span class="slide__badge">Новинка!</span>
+          <div class="slide__image-container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/lavender-big.webp 1x, img/main-hero/lavender-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/lavender-medium.webp 1x, img/main-hero/lavender-medium@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/lavender-small.webp 1x, img/main-hero/lavender-small@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/main-hero/lavender-big.jpg 1x, img/main-hero/lavender-big@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-hero/lavender-medium.jpg 1x, img/main-hero/lavender-medium@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="img/main-hero/lavender-small.jpg 1x, img/main-hero/lavender-small@2x.jpg 2x">
+              <img class="image" src="img/main-hero/lavender-small.jpg" width="280" height="280" alt="Алюминиевая банка лавандового цвета в полоску с напитком lavender Latte.">
+            </picture>
+          </div>
+          <h3 class="slide__title">Лавандовый Латте</h3>
+          <b class="slide__badge">Новинка!</b>
+          <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных гор</p>
+          <div class="slide__order">
+            <del class="slide__price slide__price--old">285₽</del>
+            <b class="slide__price">265₽</b>
+            <a class="slide__button button" href="#">Заказать</a>
+          </div>
+        </li>
+        <li class="slider__item slide swiper-slide">
+          <div class="slide__image-container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/espresso-big.webp 1x, img/main-hero/espresso-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-hero/espresso-medium.webp 1x, img/main-hero/espresso-medium@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/main-hero/espresso-small.webp 1x, img/main-hero/espresso-small@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/main-hero/espresso-big.jpg 1x, img/main-hero/espresso-big@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-hero/espresso-medium.jpg 1x, img/main-hero/espresso-medium@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="img/main-hero/espresso-small.jpg 1x, img/main-hero/espresso-small@2x.jpg 2x">
+              <img class="image" src="img/main-hero/espresso-small.jpg" width="280" height="280" alt="Алюминиевая банка чёрного цвета в полоску с напитком Triple Espresso.">
+            </picture>
+          </div>
           <h3 class="slide__title">Тройной Эспрессо</h3>
+          <b class="slide__badge">Новинка!</b>
           <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость</p>
           <div class="slide__order">
-            <del class="slider__price slider__price--old">395₽</del>
-            <b class="slider__price">375₽</b>
-            <a class="slider__order" href="#">Заказать</a>
+            <del class="slide__price slide__price--old">395₽</del>
+            <b class="slide__price">375₽</b>
+            <a class="slide__button button" href="#">Заказать</a>
           </div>
-        </li> -->
+        </li>
       </ul>
     </section>
     <section class="accomplishments">
       <h2 class="main-content__title">Преимущества</h2>
       <p class="main-content__subtitle">Главные причины выбрать Drink2Go</p>
       <dl class="accomplishments__list features-list reset-list">
-        <dt class="features-list__title">Скорость</dt>
+        <dt class="features-list__title features-list__title--speed">Скорость</dt>
         <dd class="features-list__description">Готовый напиток всегда под рукой&nbsp;&mdash; просто открой банку</dd>
-        <dt class="features-list__title">Удобство</dt>
+        <dt class="features-list__title features-list__title--convenience">Удобство</dt>
         <dd class="features-list__description">Легко помещается и&nbsp;в&nbsp;карман, и&nbsp;в&nbsp;маленькую сумочку</dd>
-        <dt class="features-list__title">Бодрость</dt>
+        <dt class="features-list__title features-list__title--courage">Бодрость</dt>
         <dd class="features-list__description">Сбалансированная доза кофеина даст мощный заряд энергии</dd>
-        <dt class="features-list__title">Экологичность</dt>
+        <dt class="features-list__title features-list__title--eco">Экологичность</dt>
         <dd class="features-list__description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</dd>
       </dl>
     </section>
@@ -242,99 +248,125 @@
         <button class="filter__button button button--apply" type="submit">Применить фильтр</button>
         <button class="filter__button button button--reset" type="reset">Сбросить фильтр</button>
       </form>
+      <div class="catalog__sorting select">
+        <p class="select__title">Сортировка:</p>
+        <select class="select__list" name="catalog-sorting">
+          <option value="by-default">по&nbsp;умолчанию</option>
+          <option value="expensive-first">сначала дорогие</option>
+          <option value="cheap-first">сначала дешёвые</option>
+          <option value="high-rating">высокий рейтинг</option>
+        </select>
+      </div>
       <div class="catalog__cards">
-        <div class="catalog__sorting select">
-          <p class="select__title">Сортировка:</p>
-          <select class="select__list" name="catalog-sorting">
-            <option value="by-default">по&nbsp;умолчанию</option>
-            <option value="expensive-first">сначала дорогие</option>
-            <option value="cheap-first">сначала дешёвые</option>
-            <option value="high-rating">высокий рейтинг</option>
-          </select>
-        </div>
         <article class="product-card">
-          <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-1.webp 1x, img/catalog/coffee-can-1@2x.webp 2x">
-            <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-1.jpg 1x, img/catalog/coffee-can-1@2x.jpg 2x">
-            <img class="product-card__image" src="img/catalog/coffee-can-1.jpg" width="130" height="188" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
-          </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
+          <a class="product-card__image-link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-1.webp 1x, img/catalog/coffee-can-1@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-1.jpg 1x, img/catalog/coffee-can-1@2x.jpg 2x">
+              <img class="product-card__image image" src="img/catalog/coffee-can-1.jpg" width="130" height="188" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
+            </picture>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <div class="product-card__order">
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon" width="20" height="16" aria-hidden="true" focusable="false">
+                <use href="img/icons/stack.svg#icon-add-to-cart" />
+              </svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </div>
         </article>
         <article class="product-card">
-          <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-2.webp 1x, img/catalog/coffee-can-2@2x.webp 2x">
-            <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-2.jpg 1x, img/catalog/coffee-can-2@2x.jpg 2x">
-            <img class="product-card__image" src="img/catalog/coffee-can-2.jpg" width="130" height="188" alt="Алюминиевая банка сиреневого цвета в полоску с напитком Decaf Flat White.">
-          </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
+          <a class="product-card__image-link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-2.webp 1x, img/catalog/coffee-can-2@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-2.jpg 1x, img/catalog/coffee-can-2@2x.jpg 2x">
+              <img class="product-card__image image" src="img/catalog/coffee-can-2.jpg" width="130" height="188" alt="Алюминиевая банка сиреневого цвета в полоску с напитком Decaf Flat White.">
+            </picture>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <product-card__order>
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon"></svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </product-card__order>
         </article>
         <article class="product-card">
+          <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-3.webp 1x, img/catalog/coffee-can-3@2x.webp 2x">
               <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-3.jpg 1x, img/catalog/coffee-can-3@2x.jpg 2x">
-              <img class="product-card__image" src="img/catalog/coffee-can-3.jpg" width="130" height="188" alt="Алюминиевая банка чёрного цвета в полоску с напитком Decaf Flat White.">
+              <img class="product-card__image image" src="img/catalog/coffee-can-3.jpg" width="130" height="188" alt="Алюминиевая банка чёрного цвета в полоску с напитком Decaf Flat White.">
             </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <product-card__order>
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon"></svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </product-card__order>
         </article>
         <article class="product-card">
+          <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-4.webp 1x, img/catalog/coffee-can-4@2x.webp 2x">
               <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-4.jpg 1x, img/catalog/coffee-can-4@2x.jpg 2x">
-              <img class="product-card__image" src="img/catalog/coffee-can-4.jpg" width="130" height="188" alt="Алюминиевая банка малинового цвета в полоску с напитком Decaf Flat White.">
+              <img class="product-card__image image" src="img/catalog/coffee-can-4.jpg" width="130" height="188" alt="Алюминиевая банка малинового цвета в полоску с напитком Decaf Flat White.">
             </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <product-card__order>
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon"></svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </product-card__order>
         </article>
         <article class="product-card">
-          <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-5.webp 1x, img/catalog/coffee-can-5@2x.webp 2x">
-            <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-5.jpg 1x, img/catalog/coffee-can-5@2x.jpg 2x">
-            <img class="product-card__image" src="img/catalog/coffee-can-5.jpg" width="130" height="188" alt="Алюминиевая банка кофейного цвета в полоску с напитком Decaf Flat White.">
-          </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
+          <a class="product-card__image-link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-5.webp 1x, img/catalog/coffee-can-5@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-5.jpg 1x, img/catalog/coffee-can-5@2x.jpg 2x">
+              <img class="product-card__image image" src="img/catalog/coffee-can-5.jpg" width="130" height="188" alt="Алюминиевая банка кофейного цвета в полоску с напитком Decaf Flat White.">
+            </picture>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <product-card__order>
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon"></svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </product-card__order>
         </article>
         <article class="product-card">
-          <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-6.webp 1x, img/catalog/coffee-can-6@2x.webp 2x">
-            <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-6.jpg 1x, img/catalog/coffee-can-6@2x.jpg 2x">
-            <img class="product-card__image" src="img/catalog/coffee-can-6.jpg" width="130" height="188" alt="Алюминиевая банка кремового цвета в полоску с напитком Decaf Flat White.">
-          </picture>
-          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
-          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-          <b class="product-card__price">225₽</b>
-          <a class="product-card__button button" href="#">
-            <svg class="button__icon"></svg>
-            <span class="button__text">В&nbsp;корзину</span>
+          <a class="product-card__image-link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/coffee-can-6.webp 1x, img/catalog/coffee-can-6@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="img/catalog/coffee-can-6.jpg 1x, img/catalog/coffee-can-6@2x.jpg 2x">
+              <img class="product-card__image image" src="img/catalog/coffee-can-6.jpg" width="130" height="188" alt="Алюминиевая банка кремового цвета в полоску с напитком Decaf Flat White.">
+            </picture>
           </a>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="#">Декаф Флэт Уайт</a></h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <product-card__order>
+            <b class="product-card__price">225₽</b>
+            <a class="product-card__button button" href="#">
+              <svg class="button__icon"></svg>
+              <span class="button__text">В&nbsp;корзину</span>
+            </a>
+          </product-card__order>
         </article>
         <ul class="catalog__pagination pagination reset-list">
           <li class="pagination__item">
@@ -361,13 +393,12 @@
         <noscript>
           <a class="map__link" href="https://yandex.ru/maps/-/CCUGiYTmtD">
             <picture>
-               <picture>
-                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
-                 <source type="image/webp" media="(min-width: 768px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
-                 <source type="image/webp" media="(min-width: 320px)" srcset="img/map-small.webp 1x, img/map-small@2x.webp 2x">
-                 <source media="(min-width: 1440px)" srcset="img/map-medium.jpg 1x, img/map-medium@2x.jpg 2x">
-                 <source media="(min-width: 768px)" srcset="img/map-medium.jpg, img/map-medium@2x.jpg 2x">
-                 <source media="(min-width: 320px)" srcset="img/map-small.jpg, img/map-small@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="img/map-small.webp 1x, img/map-small@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/map-medium.jpg 1x, img/map-medium@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-medium.jpg, img/map-medium@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="img/map-small.jpg, img/map-small@2x.jpg 2x">
               <img class="map__image" src="img/map-small.jpg" width="320" height="420" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу набережной реки Карповки и Аптекарского проспекта.">
             </picture>
           </a>
@@ -378,7 +409,7 @@
   <footer class="main-footer">
     <a class="main-footer__logo" href="/">
       <picture>
-         <source media="(min-width: 768px)" srcset="img/logo-full.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-full.svg">
         <img class="image" src="img/logo-short.svg" width="82" height="36" alt="Логотип магазина Drink2Go.">
       </picture>
     </a>

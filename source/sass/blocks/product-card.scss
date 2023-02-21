@@ -1,0 +1,44 @@
+@use "../global/global.scss";
+
+.product-card {
+  display: grid;
+  padding: 40px 20px 20px;
+  background-color: var(--page-background);
+  border-radius: 4px;
+}
+
+.product-card__image-link {
+  justify-self: center;
+  margin-bottom: 24px;
+}
+
+.product-card__image {
+  object-fit: contain;
+}
+
+.product-card__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.product-card__title-link {
+  @include global.fonter(700, 18px, 32px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card__description {
+  margin: 0;
+  margin-bottom: 16px;
+  @include global.fonter(400, 14px, 20px);
+}
+
+.product-card__order {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.product-card__price {
+  @include global.fonter(600, 20px, 32px);
+}

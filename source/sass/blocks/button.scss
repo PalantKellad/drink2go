@@ -1,0 +1,14 @@
+@use "../global/global.scss";
+
+.button {
+  display: flex;
+  place-items: center;
+  column-gap: 6px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: var(--base-light);
+  background-color: var(--base-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

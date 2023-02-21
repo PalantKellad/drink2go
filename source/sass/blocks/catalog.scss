@@ -1,0 +1,11 @@
+@use "../global/global.scss";
+
+.catalog {
+  padding: 50px 20px 44px 20px;
+  background-color: var(--background-light);
+}
+
+.catalog__cards {
+  display: grid;
+  row-gap: 20px;
+}

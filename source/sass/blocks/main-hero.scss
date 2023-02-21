@@ -1,6 +1,9 @@
 @use "../global/global.scss";
 
 .main-hero {
-  padding: 20px 20px 60px;
   background-color: var(--background-warm);
+}
+
+.main-hero__slider {
+  margin: 0;
 }

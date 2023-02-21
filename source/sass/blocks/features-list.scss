@@ -1,0 +1,48 @@
+@use "../global/global.scss";
+
+.features-list {
+  display: grid;
+  justify-items: center;
+}
+
+.features-list__title {
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+  margin-bottom: 4px;
+  @include global.fonter(700, 18px, 32px);
+
+  &::before {
+    content: "";
+    display: flex;
+    place-items: center;
+    width: 52px;
+    height: 56px;
+  }
+
+  &--speed::before {
+    background: url("../../img/icons/stack.svg#icon-speed") no-repeat;
+  }
+
+  &--convenience::before {
+    background: url("../../img/icons/stack.svg#icon-convenience") no-repeat;
+  }
+
+  &--courage::before {
+    background: url("../../img/icons/stack.svg#icon-courage") no-repeat;
+  }
+
+  &--eco::before {
+    background: url("../../img/icons/stack.svg#icon-eco") no-repeat;
+  }
+}
+
+.features-list__description {
+  margin: 0;
+  @include global.fonter(400, 14px, 20px);
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}

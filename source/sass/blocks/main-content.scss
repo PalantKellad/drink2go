@@ -1,0 +1,16 @@
+@use "../global/global.scss";
+
+.main-content__title {
+  margin: 0;
+  margin-bottom: 4px;
+  @include global.fonter(700, 12px, 16px);
+  color: var(--base-primary);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-content__subtitle {
+  margin-bottom: 36px;
+  @include global.fonter(700, 24px, 36px);
+  text-align: center;
+}
