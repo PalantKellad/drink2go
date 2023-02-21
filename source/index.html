@@ -184,8 +184,177 @@
         <button class="filter__button button button--apply" type="submit">Применить фильтр</button>
         <button class="filter__button button button--reset" type="reset">Сбросить фильтр</button>
       </form>
-
+      <div class="catalog__cards">
+        <div class="catalog__sorting select">
+          <p class="select__title">Сортировка:</p>
+          <select class="select__list" name="catalog-sorting">
+            <option value="by-default">по&nbsp;умолчанию</option>
+            <option value="expensive-first">сначала дорогие</option>
+            <option value="cheap-first">сначала дешёвые</option>
+            <option value="high-rating">высокий рейтинг</option>
+          </select>
+        </div>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка бежевого цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка сиреневого цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка чёрного цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка малинового цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка малинового цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка кофейного цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <article class="product-card">
+          <img class="product-card__image" width="130" height="188" src="#" alt="Алюминиевая банка кремового цвета в полоску с напитком Decaf Flat White.">
+          <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+          <p class="product-card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+          <b class="product-card__price">225₽</b>
+          <a class="product-card__button button" href="#">
+            <svg class="button__icon"></svg>
+            <span class="button__text">В&nbsp;корзину</span>
+          </a>
+        </article>
+        <ul class="catalog__pagination pagination reset-list">
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--back" href="#">Назад</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--current" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--forward" href="#">Вперёд</a>
+          </li>
+        </ul>
+      </div>
     </section>
+    <section class="map">
+      <h2 class="visually-hidden">Карта</h2>
+      <div class="map__container">
+        <noscript>
+          <a class="map__link" href="https://yandex.ru/maps/-/CCUGiYTmtD">
+            <img class="map__image" src="#" width="320" height="420" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу набережной реки Карповки и Аптекарского проспекта.">
+          </a>
+        </noscript>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <a class="main-footer__logo" href="/"></a>
+      <ul class="main-footer__social social reset-list">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Pinterest</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="visually-hidden">Одноклассники</span>
+          </a>
+        </li>
+      </ul>
+      <section class="main-footer__section">
+        <h2 class="main-footer__title">Интернет&#8209;магазин</h2>
+        <ul class="main-footer__menu footer-menu">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="delivery.html">Доставка</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="payment-options.html">Способы оплаты</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="about.html">О&nbsp;нас</a>
+          </li>
+        </ul>
+      </section>
+      <section class="main-footer__section">
+        <h2 class="main-footer__title">Медиа</h2>
+        <ul class="main-footer__menu footer-menu">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="blog.html">Блог</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="relations.html">Информация для СМИ</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="legal-info.html">Правовая информация</a>
+          </li>
+        </ul>
+      </section>
+      <section class="main-footer__section">
+        <h2 class="main-footer__title">Контакты</h2>
+        <address class="main-footer__address address">
+          <p class="address__location">Санкт&#8209;Петербург, набережная реки Карповки, дом 5</p>
+          <a class="address__phone" href="tel:+79999999999">+7&nbsp;(999)&nbsp;999&#8209;99&#8209;99</a>
+        </address>
+      </section>
+      <div class="main-footer__copyright copyright">
+        <p class="copyright__text">Разработано в</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
 
   </main>
 
