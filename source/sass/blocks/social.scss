@@ -1,0 +1,16 @@
+@use "../global/global.scss";
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.social__link {
+  display: flex;
+  place-items: center;
+  padding: 10px;
+}
+
+.social__img {
+  color: var(--base-neutral);
+}

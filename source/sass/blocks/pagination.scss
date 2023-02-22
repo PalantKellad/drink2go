@@ -1,0 +1,62 @@
+@use "../global/global.scss";
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__button {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  min-width: 40px;
+  padding: 8px;
+  text-decoration: none;
+  @include global.fonter(400, 16px, 24px);
+  color: var(--base-primary);
+  background-color: var(--base-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--back {
+    position: relative;
+    font-size: 0;
+  }
+
+  &--back::before {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-top: 2px solid var(--base-primary);
+    border-left: 2px solid var(--base-primary);
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
+
+  &--forward {
+    position: relative;
+    font-size: 0;
+  }
+
+  &--forward::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-top: 2px solid var(--base-primary);
+  border-left: 2px solid var(--base-primary);
+  transform: translate(50%, -50%) rotate(135deg);
+  }
+}

@@ -1,0 +1,33 @@
+@use "../global/global.scss";
+
+.main-footer {
+  display: grid;
+  row-gap: 20px;
+  padding: 22px 0px 30px;
+}
+
+.main-footer__section {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid var(--base-secondary);
+
+  &--company {
+    display: flex;
+    place-items: center;
+  }
+}
+
+.main-footer__heading {
+  font-size: 0;
+}
+
+.main-footer__logo {
+  display: block;
+  margin-right: auto;
+}
+
+.main-footer__title {
+  margin: 0;
+  margin-bottom: 12px;
+  @include global.fonter(700, 14px, 20px);
+  color: var(--base-primary);
+}
