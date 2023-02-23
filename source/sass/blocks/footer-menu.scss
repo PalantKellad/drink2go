@@ -1,0 +1,10 @@
+@use "../global/global.scss";
+
+.footer-menu__link {
+  display: block;
+  padding: 10px;
+  @include global.fonter(500, 12px, 16px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--base-dark);
+}

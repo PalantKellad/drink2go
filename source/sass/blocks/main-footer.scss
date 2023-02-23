@@ -3,7 +3,7 @@
 .main-footer {
   display: grid;
   row-gap: 20px;
-  padding: 22px 0px 30px;
+  padding: 22px 0 30px;
 }
 
 .main-footer__section {
@@ -30,4 +30,9 @@
   margin-bottom: 12px;
   @include global.fonter(700, 14px, 20px);
   color: var(--base-primary);
+}
+
+.main-footer__menu {
+  margin: 0;
+  margin-left: -10px;
 }

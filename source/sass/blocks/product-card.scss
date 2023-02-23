@@ -35,10 +35,15 @@
 
 .product-card__order {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 50px;
 }
 
 .product-card__price {
   @include global.fonter(600, 20px, 32px);
+}
+
+.product-card__button {
+  margin-left: auto;
 }

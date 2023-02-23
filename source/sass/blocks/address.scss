@@ -1,0 +1,36 @@
+@use "../global/global.scss";
+
+.address__text {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  @include global.fonter(400, 14px, 20px);
+  text-decoration: none;
+  color: var(--base-dark);
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &--location::before {
+    content: "";
+    display: block;
+    margin-right: 6px;
+    min-width: 13px;
+    height: 16px;
+    background-color: var(--base-primary);
+    mask: url("../../img/icons/stack.svg#icon-location") no-repeat center center;
+    mask-size: cover;
+  }
+
+  &--phone::before {
+    content: "";
+    display: block;
+    margin-right: 6px;
+    min-width: 13px;
+    height: 16px;
+    background-color: var(--base-primary);
+    mask: url("../../img/icons/stack.svg#icon-phone") no-repeat center center;
+    mask-size: cover;
+  }
+}

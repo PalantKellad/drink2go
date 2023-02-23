@@ -47,16 +47,16 @@
   }
 
   &--forward::before {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border-top: 2px solid var(--base-primary);
-  border-left: 2px solid var(--base-primary);
-  transform: translate(50%, -50%) rotate(135deg);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-top: 2px solid var(--base-primary);
+    border-left: 2px solid var(--base-primary);
+    transform: translate(50%, -50%) rotate(135deg);
   }
 }
