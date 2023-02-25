@@ -1,9 +1,97 @@
 @use "../global/global.scss";
 
 .main-hero {
+  position: relative;
   background-color: var(--background-warm);
 }
 
 .main-hero__slider {
   margin: 0;
+}
+
+.main-hero__button {
+  --hover-prev: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  --hover-next: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  --active-prev: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  --active-next: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--prev:hover {
+    background: var(--hover-prev);
+  }
+
+  &--prev:focus {
+    background: var(--hover-prev);
+  }
+
+  &--prev:active {
+    background: var(--active-prev);
+  }
+
+  &--prev::before {
+    transform: rotate(-45deg);
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &--next:hover {
+    background: var(--hover-next);
+  }
+
+  &--next:focus {
+    background: var(--hover-next);
+  }
+
+  &--next:active {
+    background: var(--active-next);
+  }
+
+  &--next::before {
+    transform: rotate(135deg);
+  }
+
+  &--disabled:hover {
+    cursor: default;
+    background: transparent;
+  }
+
+  &--disabled:focus {
+    cursor: default;
+    background: transparent;
+  }
+
+  &--disabled::before {
+    border-top: 2px solid var(--base-neutral);
+    border-left: 2px solid var(--base-neutral);
+  }
+}
+
+.main-hero__pagination {
+  display: none;
 }

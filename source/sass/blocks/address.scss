@@ -1,5 +1,9 @@
 @use "../global/global.scss";
 
+.address {
+  padding-top: 7px;
+}
+
 .address__text {
   display: flex;
   align-items: flex-start;
@@ -18,9 +22,14 @@
     margin-right: 6px;
     min-width: 13px;
     height: 16px;
-    background-color: var(--base-primary);
+    background-color: var(--primary);
     mask: url("../../img/icons/stack.svg#icon-location") no-repeat center center;
     mask-size: cover;
+  }
+
+  &--phone {
+    --color: var(--base-dark);
+    color: var(--color);
   }
 
   &--phone::before {
@@ -29,8 +38,20 @@
     margin-right: 6px;
     min-width: 13px;
     height: 16px;
-    background-color: var(--base-primary);
+    background-color: var(--primary);
     mask: url("../../img/icons/stack.svg#icon-phone") no-repeat center center;
     mask-size: cover;
+  }
+
+  &:hover {
+    --color: var(--primary-light);
+  }
+
+  &:focus {
+    --color: var(--primary-light);
+  }
+
+  &:active {
+    --color: var(--primary-dark);
   }
 }

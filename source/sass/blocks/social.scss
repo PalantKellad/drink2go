@@ -6,11 +6,31 @@
 }
 
 .social__link {
+  --color: var(--base-neutral);
+  --background-color: transparent;
+
   display: flex;
   place-items: center;
   padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 4px;
+
+  &:hover {
+    --color: var(--primary);
+    --background-color: var(--primary-lightest);
+  }
+
+  &:focus {
+    --color: var(--primary);
+    --background-color: var(--primary-lightest);
+  }
+
+  &:active {
+    --color: var(--primary);
+    --background-color: var(--primary-opacity);
+  }
 }
 
 .social__img {
-  color: var(--base-neutral);
+  color: var(--color);
 }

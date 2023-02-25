@@ -1,0 +1,231 @@
+@use "../global/global.scss";
+
+.form {
+  padding-bottom: 36px;
+}
+
+.form__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 23px;
+  @include global.fonter(600, 16px, 24px);
+}
+
+.form__container {
+  display: grid;
+  row-gap: 21px;
+  margin: 0;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+}
+
+.form__label--disabled {
+  color: var(--base-neutral)
+}
+
+.form__value {
+  @include global.fonter(400, 16px, 24px);
+}
+
+.form__radio-button {
+  --border-color: var(--base-neutral);
+  --background-color: transparent;
+  --scale: scale(0);
+  --cursor: pointer;
+
+  appearance: none;
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  margin-right: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: var(--cursor);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transform: var(--scale);
+    transition: 120ms ease-out;
+  }
+
+  &:hover {
+    --border-color: var(--primary-light);
+    --background-color: var(--primary-opacity);
+    --scale: scale(1);
+  }
+
+  &:focus {
+    --border-color: var(--primary-light);
+    --background-color: var(--primary-opacity);
+    --scale: scale(1);
+  }
+
+  &:checked {
+    --border-color: var(--primary);
+    --background-color: var(--primary);
+    --scale: scale(1);
+  }
+
+  &:checked:hover {
+    --border-color: var(--primary-light);
+    --background-color: var(--primary-opacity);
+  }
+
+  &:disabled {
+    --border-color: var(--primary-neutral);
+    --background-color: transparent;
+    --cursor: default;
+  }
+
+  &:disabled:checked {
+    --border-color: var(--base-neutral);
+    --background-color: var(--base-neutral);
+    --cursor: default;
+  }
+}
+
+.form__checkbox {
+  --background-color: var(--base-neutral);
+  --pin-color: var(--base-light);
+  --border-color: var(--base-neutral);
+  --translate: translateX(-2px);
+  --cursor: pointer;
+
+  appearance: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 42px;
+  height: 24px;
+  margin: 0;
+  padding: 2px;
+  margin-right: 10px;
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: var(--cursor);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--pin-color);
+    border-radius: 50%;
+    transform: var(--translate);
+    transition: 150ms ease-out;
+  }
+
+  &:hover {
+    --background-color: var(--primary-opacity);
+    --border-color: var(--primary-light);
+  }
+
+  &:focus {
+    --background-color: var(--primary-opacity);
+    --border-color: var(--primary-light);
+  }
+
+  &:checked {
+    --background-color: var(--primary);
+    --border-color: var(--primary);
+    --translate: translateX(16px);
+  }
+
+  &:checked:hover {
+    --background-color: var(--primary-opacity);
+    --border-color: var(--primary-light);
+  }
+
+  &:disabled {
+    --background-color: var(--primary-neutral);
+    --pin-color: var(--background-light);
+    --border-color: var(--primary-neutral);
+    --cursor: default;
+  }
+
+  &:disabled:checked {
+    --background-color: var(--primary-neutral);
+    --pin-color: var(--base-neutral);
+    --border-color: var(--primary-neutral);
+    --translate: translateX(16px);
+    --cursor: default;
+  }
+}
+
+.form__buttons {
+  display: grid;
+  row-gap: 25px;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+.form__button {
+  --color: var(--base-light);
+  --background-color: var(--primary);
+
+  display: flex;
+  place-items: center;
+  padding: 11px 14px;
+  text-decoration: none;
+  @include global.fonter(400, 13px, 24px);
+  color: var(--color);
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--apply {
+    --disabled-background-color: var(--base-neutral);
+
+    @include global.fonter(400, 13px, 24px);
+  }
+
+  &--reset {
+    --color: var(--primary);
+    --background-color: var(--base-light);
+    --disabled-background-color: var(--primary-neutral);
+
+    @include global.fonter(400, 14px, 24px);
+  }
+
+  &:hover {
+    --color: var(--base-light);
+    --background-color: var(--primary-light);
+  }
+
+  &:focus {
+    --color: var(--base-light);
+    --background-color: var(--primary-light);
+  }
+
+  &:active {
+    --color: var(--base-light);
+    --background-color: var(--primary-dark);
+  }
+
+  &--disabled {
+    --color: var(--base-light);
+    background-color: var(--disabled-background-color);
+    cursor: default;
+  }
+}

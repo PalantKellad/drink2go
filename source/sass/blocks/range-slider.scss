@@ -1,0 +1,120 @@
+@use "../global/global.scss";
+
+.range-slider {
+  padding-top: 10px;
+}
+
+.range-slider__scale {
+  position: relative;
+  margin-bottom: 13px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-neutral);
+}
+
+.range-slider__bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 20px;
+  height: 5px;
+  background-color: var(--primary);
+  transform: translateY(-50%);
+
+  &--disabled {
+    background-color: var(--base-neutral);
+  }
+}
+
+.range-slider__toggle {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: var(--base-light);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
+  }
+
+  &:hover::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-opacity);
+    border-radius: 50%;
+  }
+
+  &:active {
+    border-color: var(--primary-dark);
+  }
+
+  &:active::before {
+    background-color: var(--primary-dark);
+  }
+
+  &--disabled {
+    border-color: var(--base-neutral);
+    cursor: default;
+  }
+
+  &--disabled:hover::before {
+    display: none;
+  }
+}
+
+.range-slider__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-slider__label {
+  display: flex;
+  font-size: 0;
+}
+
+.range-slider__input {
+  appearance: textfield;
+  display: flex;
+  width: 118px;
+  padding: 6px 10px;
+  @include global.fonter(500, 16px, 24px);
+  text-align: center;
+  color: var(--base-dark);
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: var(--primary-dark);
+  }
+
+  &--disabled {
+    color: var(--base-neutral);
+    border-color: var(--base-neutral);
+    cursor: default;
+  }
+
+  &--disabled:focus {
+    border-color: var(--base-neutral);
+    cursor: default;
+  }
+}
+
+.range-slider__inputs-divider {
+  @include global.fonter(500, 16px, 24px);
+  color: var(--base-neutral);
+}

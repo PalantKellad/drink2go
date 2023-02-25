@@ -7,8 +7,40 @@
   padding: 8px 20px;
   text-decoration: none;
   color: var(--base-light);
-  background-color: var(--base-primary);
+  background-color: var(--primary);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-light);
+  }
+
+  &:focus {
+    background-color: var(--primary-light);
+  }
+
+  &:active {
+    background-color: var(--primary-dark); /* Здесь есть проблема у кнопок в Свайпере в Firefox: https://github.com/nolimits4web/swiper/issues/2564. При клике состояние не навешивается, но хотя бы сам переход по линку случается. */
+  }
+
+  &--disabled {
+    background-color: var(--base-neutral);
+    cursor: default;
+  }
+
+  &--disabled:hover {
+    background-color: var(--base-neutral);
+    cursor: default;
+  }
+
+  &--disabled:focus {
+    background-color: var(--base-neutral);
+    cursor: default;
+  }
+
+  &--disabled:active {
+    background-color: var(--base-neutral);
+    cursor: default;
+  }
 }

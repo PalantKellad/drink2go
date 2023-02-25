@@ -6,6 +6,8 @@
   <title>Интернет-магазин Drink2Go</title>
   <meta name="description" content="Drink2Go – интернет-магазин по продаже кофейных напитков">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -42,13 +44,14 @@
             <span class="user-menu__cart-text">Корзина</span>
           </a>
       </ul>
-      <button class="main-navigation__toggle toggle" type="button">
+      <button class="toggle toggle--no-js" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <span class="toggle__button"></span>
       </button>
-      <ul class="main-navigation__main-menu main-menu reset-list">
+      <ul class="main-navigation__main-menu main-menu main-menu--no-js reset-list">
+        <!-- Модификатор no js показывает меню без JS -->
         <li class="main-menu__item">
-          <a class="main-menu__link main-menu__link--current" href="#" aria-current="page">Главная</a>
+          <a class="main-menu__link" href="#" aria-current="page">Главная</a>
         </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="catalog.html">Каталог</a>
@@ -67,8 +70,8 @@
     <h1 class="visually-hidden">Drink2Go&nbsp;&mdash; интернет&#8209;магазин по&nbsp;продаже кофейных напитков</h1>
     <section class="main-hero swiper">
       <h2 class="visually-hidden">Новые товары</h2>
-      <ul class="main-hero__slider slider swiper-wrapper reset-list">
-        <li class="slider__item slide swiper-slide">
+      <ul class="main-hero__slider swiper-wrapper reset-list">
+        <li class="slide swiper-slide">
           <div class="slide__image-container">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/flat-white-big.webp 1x, img/main-hero/flat-white-big@2x.webp 2x">
@@ -89,7 +92,7 @@
             <a class="slide__button button" href="#">Заказать</a>
           </div>
         </li>
-        <li class="slider__item slide swiper-slide">
+        <li class="slide swiper-slide">
           <div class="slide__image-container">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/lavender-big.webp 1x, img/main-hero/lavender-big@2x.webp 2x">
@@ -110,7 +113,7 @@
             <a class="slide__button button" href="#">Заказать</a>
           </div>
         </li>
-        <li class="slider__item slide swiper-slide">
+        <li class="slide swiper-slide">
           <div class="slide__image-container">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/main-hero/espresso-big.webp 1x, img/main-hero/espresso-big@2x.webp 2x">
@@ -132,6 +135,9 @@
           </div>
         </li>
       </ul>
+      <div class="main-hero__pagination swiper-pagination"></div>
+      <div class="main-hero__button main-hero__button--prev"></div>
+      <div class="main-hero__button main-hero__button--next"></div>
     </section>
     <section class="accomplishments">
       <h2 class="main-content__title">Преимущества</h2>
@@ -150,112 +156,112 @@
     <section class="catalog">
       <h2 class="main-content__title">Каталог</h2>
       <p class="main-content__subtitle">Каталог кофейных напитков</p>
-      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="filter__item" aria-label="Фильтр по цене.">
-          <h3 class="filter__title">Цена</h3>
-          <div class="filter__container filter__container--range">
-            <div class="filter__scale">
-              <div class="filter__bar">
-                <button class="filter__toggle filter__toggle--min" type="button">
+      <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="form__item" aria-label="Фильтр по цене.">
+          <h3 class="form__title">Цена</h3>
+          <div class="form__container range-slider">
+            <div class="range-slider__scale">
+              <div class="range-slider__bar">
+                <button class="range-slider__toggle range-slider__toggle--min" type="button">
                   <span class="visually-hidden">Изменить минимальную цену.</span>
                 </button>
-                <button class="filter__toggle filter__toggle--max" type="button">
+                <button class="range-slider__toggle range-slider__toggle--max" type="button">
                   <span class="visually-hidden">Изменить максимальную цену.</span>
                 </button>
               </div>
             </div>
+            <div class="range-slider__inputs">
+              <label class="range-slider__label"><span>Минимальная цена</span>
+                <input class="range-slider__input" type="number" value="0" placeholder="0" name="min-price">
+              </label>
+              <span class="range-slider__inputs-divider">–</span>
+              <label class="range-slider__label"><span>Максимальная цена</span>
+                <input class="range-slider__input" type="number" value="900" name="max-price">
+              </label>
+            </div>
           </div>
-          <label class="filter__label"><span>Минимальная цена</span>
-            <input class="filter__select" type="number" value="0" name="min-price" tabindex="-1">
-          </label>
-          <label class="filter__label"><span>Максимальная цена</span>
-            <input class="filter__select" type="number" value="900" name="max-price" tabindex="-1">
-          </label>
+
         </fieldset>
-        <fieldset class="filter__item" aria-label="Фильтр по наличию молока.">
-          <h3 class="filter__title">Наличие молока</h3>
-          <ul class="filter__container filter__container--checks reset-list">
+        <fieldset class="form__item" aria-label="Фильтр по наличию молока.">
+          <h3 class="form__title">Наличие молока</h3>
+          <ul class="form__container reset-list">
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="no-matter" checked>
-                <span class="filter__check filter__check--radio"></span>
-                <span class="filter__value">Не важно</span>
+              <label class="form__label">
+                <input class="form__radio-button" type="radio" name="milk-presence" value="no-matter" checked>
+                <span class="form__value">Неважно</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="animal-milk">
-                <span class="filter__check filter__check--radio"></span>
-                <span class="filter__value">Только животное</span>
+              <label class="form__label">
+                <input class="form__radio-button" type="radio" name="milk-presence" value="animal-milk">
+                <span class="form__value">Только животное</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="plant-milk">
-                <span class="filter__check filter__check--radio"></span>
-                <span class="filter__value">Только растительное</span>
+              <label class="form__label">
+                <input class="form__radio-button" type="radio" name="milk-presence" value="plant-milk">
+                <span class="form__value">Только растительное</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="radio" name="milk-presence" value="no-milk" disabled>
-                <span class="filter__check filter__check--radio"></span>
-                <span class="filter__value">Без молока</span>
+              <label class="form__label form__label--disabled">
+                <input class="form__radio-button" type="radio" name="milk-presence" value="no-milk" disabled>
+                <span class="form__value">Без молока</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter__item" aria-label="Фильтр по стране.">
-          <h3 class="filter__title">Страна произрастания</h3>
-          <ul class="filter__container filter__container--checks reset-list">
+        <fieldset class="form__item" aria-label="Фильтр по стране.">
+          <h3 class="form__title">Страна произрастания</h3>
+          <ul class="form__container reset-list">
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="checkbox" name="Brasil" checked>
-                <span class="filter__check filter__check--box"></span>
-                <span class="filter__value">Бразилия</span>
+              <label class="form__label">
+                <input class="form__checkbox" type="checkbox" name="Brasil" checked>
+                <span class="form__value">Бразилия</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="checkbox" name="Ethiopia">
-                <span class="filter__check filter__check--box"></span>
-                <span class="filter__value">Эфиопия</span>
+              <label class="form__label">
+                <input class="form__checkbox" type="checkbox" name="Ethiopia">
+                <span class="form__value">Эфиопия</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="checkbox" name="Colombia">
-                <span class="filter__check filter__check--box"></span>
-                <span class="filter__value">Колумбия</span>
+              <label class="form__label">
+                <input class="form__checkbox" type="checkbox" name="Colombia">
+                <span class="form__value">Колумбия</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="checkbox" name="Costa-Rica">
-                <span class="filter__check filter__check--box"></span>
-                <span class="filter__value">Коста-Рика</span>
+              <label class="form__label">
+                <input class="form__checkbox" type="checkbox" name="Costa-Rica">
+                <span class="form__value">Коста-Рика</span>
               </label>
             </li>
             <li>
-              <label class="filter__label filter__label--checks">
-                <input class="filter__input visually-hidden" type="checkbox" name="Peru" disabled>
-                <span class="filter__check filter__check--box"></span>
-                <span class="filter__value">Перу</span>
+              <label class="form__label form__label--disabled">
+                <input class="form__checkbox" type="checkbox" name="Peru" disabled>
+                <span class="form__value">Перу</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <button class="filter__button button button--apply" type="submit">Применить фильтр</button>
-        <button class="filter__button button button--reset" type="reset">Сбросить фильтр</button>
+        <div class="form__buttons">
+          <button class="form__button form__button--apply" type="submit">Применить фильтр</button>
+          <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
+        </div>
       </form>
       <div class="catalog__sorting select">
         <p class="select__title">Сортировка:</p>
-        <select class="select__list" name="catalog-sorting">
-          <option value="by-default">по&nbsp;умолчанию</option>
-          <option value="expensive-first">сначала дорогие</option>
-          <option value="cheap-first">сначала дешёвые</option>
-          <option value="high-rating">высокий рейтинг</option>
-        </select>
+
+        <div class="select__list-container">
+          <select class="select__list" name="catalog-sorting">
+            <option class="select__item" value="by-default">по&nbsp;умолчанию</option>
+            <option value="expensive-first">сначала дорогие</option>
+            <option value="cheap-first">сначала дешёвые</option>
+            <option value="high-rating">высокий рейтинг</option>
+          </select>
+        </div>
       </div>
       <div class="catalog__cards">
         <article class="product-card">
@@ -387,7 +393,7 @@
           <a class="pagination__button" href="#">1</a>
         </li>
         <li>
-          <a class="pagination__button pagination__button--current button" aria-current="page">2</a>
+          <a class="pagination__button" aria-current="location">2</a>
         </li>
         <li>
           <a class="pagination__button" href="#">3</a>
@@ -397,7 +403,7 @@
         </li>
       </ul>
     </section>
-    <section class="map">
+    <section class="map" id="map">
       <h2 class="visually-hidden">Карта</h2>
       <div class="map__container">
         <noscript>
@@ -409,7 +415,7 @@
               <source media="(min-width: 1440px)" srcset="img/map-medium.jpg 1x, img/map-medium@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-medium.jpg, img/map-medium@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="img/map-small.jpg, img/map-small@2x.jpg 2x">
-              <img class="map__image" src="img/map-small.jpg" width="320" height="420" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу набережной реки Карповки и Аптекарского проспекта.">
+              <img class="map__image image" src="img/map-small.jpg" width="320" height="420" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу набережной реки Карповки и Аптекарского проспекта.">
             </picture>
           </a>
         </noscript>
@@ -496,9 +502,9 @@
     </div>
   </footer>
 
-
-
-  <script src="./js/script.js" defer></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>

@@ -9,15 +9,18 @@
 }
 
 .pagination__button {
-  display: grid;
-  place-items: center;
+  --color: var(--primary);
+  --background-color: var(--base-light);
+
+  display: flex;
+  justify-content: center;
   gap: 20px;
   min-width: 40px;
   padding: 8px;
   text-decoration: none;
   @include global.fonter(400, 16px, 24px);
-  color: var(--base-primary);
-  background-color: var(--base-light);
+  color: var(--color);
+  background-color: var(--background-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -33,11 +36,11 @@
     right: 50%;
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: transparent;
-    border-top: 2px solid var(--base-primary);
-    border-left: 2px solid var(--base-primary);
+    border-top: 2px solid var(--color);
+    border-left: 2px solid var(--color);
     transform: translate(50%, -50%) rotate(-45deg);
   }
 
@@ -52,11 +55,57 @@
     right: 50%;
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: transparent;
-    border-top: 2px solid var(--base-primary);
-    border-left: 2px solid var(--base-primary);
+    border-top: 2px solid var(--color);
+    border-left: 2px solid var(--color);
     transform: translate(50%, -50%) rotate(135deg);
+  }
+
+  &:hover {
+    --color: var(--base-light);
+    --background-color: var(--primary-light);
+  }
+
+  &:focus {
+    --color: var(--base-light);
+    --background-color: var(--primary-light);
+  }
+
+  &:active {
+    --color: var(--base-light);
+    --background-color: var(--primary-dark);
+  }
+
+  &[aria-current] { /* Макеев разрешил: https://web-standards.ru/podcast/328/#00:39:24. Мне нравится такой подход. */
+    font-weight: 600;
+    --color: var(--base-dark);
+    --background-color: transparent;
+    cursor: default;
+  }
+
+  &--disabled {
+    --color: var(--base-light);
+    --background-color: var(--primary-neutral);
+    cursor: default;
+  }
+
+  &--disabled:hover {
+    --color: var(--base-light);
+    --background-color: var(--primary-neutral);
+    cursor: default;
+  }
+
+  &--disabled:focus {
+    --color: var(--base-light);
+    --background-color: var(--primary-neutral);
+    cursor: default;
+  }
+
+  &--disabled:active {
+    --color: var(--base-light);
+    --background-color: var(--primary-neutral);
+    cursor: default;
   }
 }

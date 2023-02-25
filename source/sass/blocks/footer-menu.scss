@@ -7,4 +7,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--base-dark);
+
+  &:hover {
+    color: var(--primary-light);
+  }
+
+  &:focus {
+    color: var(--primary-light);
+  }
+
+  &:active {
+    color: var(--primary-dark);
+  }
 }

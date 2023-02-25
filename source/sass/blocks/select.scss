@@ -1,0 +1,65 @@
+@use "../global/global.scss";
+
+.select {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.select__title {
+  margin: 0;
+  @include global.fonter(600, 16px, 24px);
+}
+
+.select__list-container {
+  position: relative;
+  grid-template-areas: "select";
+  display: grid;
+  align-items: center;
+
+  &::after {
+    content: "";
+    grid-area: select;
+    z-index: 1;
+    justify-self: end;
+    display: block;
+    margin-right: 10px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+    transform: rotate(-135deg) translateY(20%);
+    cursor: pointer;
+  }
+
+  :hover {
+    background-color: var(--primary-lightest);
+    border-radius: 4px;
+  }
+
+  :focus {
+    background-color: var(--primary-lightest);
+    border-radius: 4px;
+  }
+}
+
+.select__list {
+  appearance: none;
+  grid-area: select;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 4px 10px;
+  @include global.fonter(600, 16px, 24px);
+  color: var(--primary);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.select__item {
+  @include global.fonter(400, 16px, 24px);
+}

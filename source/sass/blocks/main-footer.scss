@@ -3,16 +3,17 @@
 .main-footer {
   display: grid;
   row-gap: 20px;
-  padding: 22px 0 30px;
+  padding: 7px 0 30px;
 }
 
 .main-footer__section {
-  padding: 0 20px 20px;
-  border-bottom: 1px solid var(--base-secondary);
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--primary-lightest);
 
   &--company {
     display: flex;
     place-items: center;
+    padding-top: 13px;
   }
 }
 
@@ -23,13 +24,29 @@
 .main-footer__logo {
   display: block;
   margin-right: auto;
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:focus {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.main-footer__social {
+  margin: 0;
 }
 
 .main-footer__title {
   margin: 0;
   margin-bottom: 12px;
   @include global.fonter(700, 14px, 20px);
-  color: var(--base-primary);
+  color: var(--primary);
 }
 
 .main-footer__menu {

@@ -1,40 +1,83 @@
 @use "../global/global.scss";
 
 .toggle {
+  --color: var(--base-dark);
+  --background-color: var(--page-background);
+
+  position: relative;
   display: flex;
-  place-items: center;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
   padding: 22px;
   border: none;
-  background-color: var(--page-background);
+  background-color: var(--background-color);
   cursor: pointer;
+
+  &--no-js {
+    display: none;
+  }
+
+  &:hover {
+    --color: var(--primary);
+  }
+
+  &:focus {
+    --color: var(--primary);
+  }
+
+  &:active {
+    --color: var(--base-dark);
+    --background-color: var(--primary-lightest);
+
+    background-color: var(--background-color);
+  }
 }
 
 .toggle__button {
-  position: relative;
+  --transition-duration: 300ms;
+
+  position: absolute;
+  top: 30px;
   display: block;
   width: 16px;
-  height: 16px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background-color: var(--base-dark);
+  height: 2px;
+  background-color: var(--color);
+  transition-duration: var(--transition-duration);
 
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: -5px;
     display: block;
     width: 16px;
-    height: 5px;
-    background-color: var(--page-background);
+    height: 2px;
+    background-color: var(--color);
+    transition: transform var(--transition-duration) ease-out;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 2px;
+    top: 5px;
     display: block;
     width: 16px;
-    height: 5px;
-    background-color: var(--page-background);
+    height: 2px;
+    background-color: var(--color);
+    transition: transform var(--transition-duration) ease-out;
+  }
+
+  &--open {
+    background-color: transparent;
+  }
+
+  &--open::before {
+    content: "";
+    transform: rotateZ(45deg) scaleX(1.35) translate(3px, 3px);
+  }
+
+  &--open::after {
+    content: "";
+    transform: rotateZ(-45deg) scaleX(1.35) translate(3px, -3px);
   }
 }

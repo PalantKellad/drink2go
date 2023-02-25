@@ -1,6 +1,14 @@
 @use "../global/global.scss";
 
 .main-header {
+  position: relative;
   min-height: 60px;
   background-color: var(--page-background);
+}
+
+.main-header__navigation {
+  &--open {
+    position: absolute;
+    z-index: 2;
+  }
 }

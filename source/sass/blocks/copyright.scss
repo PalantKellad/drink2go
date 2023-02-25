@@ -12,8 +12,10 @@
   color: var(--base-neutral);
 
   &--link {
+    --color: var(--base-neutral);
     display: flex;
     text-decoration: none;
+    color: var(--color);
   }
 
   &--link::after {
@@ -22,8 +24,20 @@
     margin-left: 4px;
     min-width: 12px;
     height: 16px;
-    background-color: var(--base-neutral);
+    background-color: var(--color);
     mask: url("../../img/icons/stack.svg#html-academy-logo") no-repeat center center;
     mask-size: cover;
+  }
+
+  &:hover {
+    --color: var(--primary);
+  }
+
+  &:focus {
+    --color: var(--primary);
+  }
+
+  &:active {
+    --color: var(--primary-dark);
   }
 }

@@ -9,6 +9,18 @@
 .main-navigation__logo {
   margin-right: auto;
   padding: 12px 20px;
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:focus {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .main-navigation__heading {
@@ -25,5 +37,5 @@
   flex-grow: 1;
   flex-basis: 100%;
   margin: 0;
-  border-top: 1px solid var(--base-secondary);
+  border-top: 1px solid var(--primary-lightest);
 }
