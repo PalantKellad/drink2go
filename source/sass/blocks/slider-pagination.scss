@@ -1,0 +1,41 @@
+@use "../global/global.scss";
+
+.slider-pagination {
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 8px;
+}
+
+.slider-pagination__bullet {
+  --color: var(--base-light);
+
+  display: flex;
+  width: 62px;
+  height: 4px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--color);
+  }
+
+  &--current {
+    --color: var(--primary);
+  }
+
+  &:hover {
+    --color: var(--primary-opacity);
+  }
+
+  &:focus {
+    --color: var(--primary-opacity);
+  }
+
+  &:active {
+    --color: var(--primary);
+  }
+}

@@ -3,4 +3,26 @@
 .map {
   width: 100%;
   min-height: 420px;
+
+  @media (min-width: global.$width-medium) {
+    min-height: 480px;
+  }
+
+  @media (min-width: global.$width-big) {
+    min-height: 540px;
+  }
+}
+
+.map__container {
+  position: relative;
+}
+
+.map__link {
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.map__image {
+  object-fit: contain;
 }

@@ -20,8 +20,12 @@ navToggle.addEventListener('click', onMenuButtonClick);
 const swiper = new Swiper('.swiper', {
   loop: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.main-hero__pagination',
     clickable: 'true',
+    bulletActiveClass: 'slider-pagination__bullet--current',
+    bulletClass: 'slider-pagination__bullet',
+    horizontalClass: 'main-hero__pagination',
+    clickableClass: 'main-hero__pagination',
   },
 
   navigation: {
@@ -34,6 +38,20 @@ const swiper = new Swiper('.swiper', {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
     paginationBulletMessage: 'Перейти к слайду {{index}}',
+  }
+});
+
+const parentElement = document.querySelector(".main-hero");
+
+swiper.on('slideChangeTransitionEnd', function (evt) {
+  if (this.realIndex == 0) {
+    parentElement.style.setProperty('--background', 'var(--background-warm)');
+  }
+  if (this.realIndex == 1) {
+    parentElement.style.setProperty('--background', 'var(--background-cold)');
+  }
+  if (this.realIndex == 2) {
+    parentElement.style.setProperty('--background', 'var(--background-neutral)');
   }
 });
 

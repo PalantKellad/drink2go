@@ -1,16 +1,9 @@
 @use "../global/global.scss";
 
-.select {
-  display: flex;
-  column-gap: 10px;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
 .select__title {
+  flex-basis: 10%;
   margin: 0;
-  @include global.fonter(600, 16px, 24px);
+  font: 600 16px/24px var(--font-family);
 }
 
 .select__list-container {
@@ -53,13 +46,17 @@
   align-items: center;
   margin: 0;
   padding: 4px 10px;
-  @include global.fonter(600, 16px, 24px);
+  font: 600 16px/24px var(--font-family);
   color: var(--primary);
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: global.$width-medium) {
+    padding: 4px 6px;
+  }
 }
 
 .select__item {
-  @include global.fonter(400, 16px, 24px);
+  font: 400 16px/24px var(--font-family);
 }

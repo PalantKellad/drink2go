@@ -3,56 +3,121 @@
 .slide {
   display: grid;
   justify-items: center;
-  padding: 20px 20px 60px;
+  padding: 20px global.$padding-inline-small 60px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 59px 60px 0;
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-template-columns: 49% 46%;
+    grid-template-rows: auto;
+    column-gap: 27px;
+    padding: 30px 60px 0;
+  }
 }
 
 .slide__image-container {
   order: -2;
   margin-bottom: 10px;
+
+  @media (min-width: global.$width-medium) {
+    order: 5;
+  }
+
+  @media (min-width: global.$width-big) {
+    order: 1;
+    grid-column: 1 / 2;
+  }
+}
+
+.slide__text-container {
+  display: contents;
+
+  @media (min-width: global.$width-big) {
+    order: 2;
+    grid-column: 2 / 2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+  }
 }
 
 .slide__title {
   margin: 0;
   margin-bottom: 10px;
-  @include global.fonter(700, 36px, 48px);
+  font: 700 36px/48px var(--font-family);
   letter-spacing: 1px;
   text-align: center;
+
+  @media (min-width: global.$width-medium) {
+    order: 2;
+    margin-bottom: 16px;
+    font: 700 56px/80px var(--font-family);
+  }
+
+  @media (min-width: global.$width-big) {
+    text-align: left;
+  }
 }
 
 .slide__badge {
   order: -1;
   margin-bottom: 4px;
-  @include global.fonter(700, 12px, 16px);
+  font: 700 12px/16px var(--font-family);
   text-align: center;
   text-transform: uppercase;
   color: var(--primary);
+
+  @media (min-width: global.$width-medium) {
+    order: 1;
+  }
+
+  @media (min-width: global.$width-big) {
+    text-align: left;
+  }
 }
 
 .slide__description {
   margin: 0;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: global.$width-medium) {
+    order: 3;
+    font: 400 20px/32px var(--font-family);
+  }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
 }
 
 .slide__order {
   display: flex;
   align-items: center;
+
+  @media (min-width: global.$width-medium) {
+    order: 4;
+    margin-bottom: 20px;
+  }
 }
 
 .slide__price {
   display: block;
   margin-right: 20px;
-  @include global.fonter(600, 20px, 32px);
+  font: 600 20px/32px var(--font-family);
   text-decoration: none;
 
   &--old {
     margin-right: 6px;
-    @include global.fonter(400, 16px, 32px);
+    font: 400 16px/32px var(--font-family);
     color: var(--primary);
     text-decoration: line-through;
   }
 }
 
 .slide__button {
-  @include global.fonter(400, 16px, 24px);
+  font: 400 16px/24px var(--font-family);
 }

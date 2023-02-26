@@ -1,14 +1,18 @@
 @use "../global/global.scss";
 
 .address {
-  padding-top: 7px;
+  padding-top: 10px;
+
+  @media (min-width: global.$width-medium) {
+    padding-top: 13px;
+  }
 }
 
 .address__text {
   display: flex;
   align-items: flex-start;
   margin: 0;
-  @include global.fonter(400, 14px, 20px);
+  font: 400 14px/20px var(--font-family);
   text-decoration: none;
   color: var(--base-dark);
 

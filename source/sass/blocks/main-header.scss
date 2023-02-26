@@ -4,6 +4,10 @@
   position: relative;
   min-height: 60px;
   background-color: var(--page-background);
+
+  @media (min-width: global.$width-medium) {
+    min-height: 80px;
+  }
 }
 
 .main-header__navigation {

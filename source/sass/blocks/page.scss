@@ -11,7 +11,22 @@
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
-  @include global.fonter(400, 14px, 20px);
+  font: 400 14px/20px var(--font-family);
   color: var(--base-dark);
   background-color: var(--page-background);
+}
+
+.page__container {
+  display: contents;
+
+  @media (min-width: global.$width-medium) {
+    display: block;
+    padding: 0 global.$padding-inline-medium 0;
+  }
+
+  @media (min-width: global.$width-big) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 global.$padding-inline-big 0;
+  }
 }

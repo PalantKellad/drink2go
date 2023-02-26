@@ -1,7 +1,15 @@
 @use "../global/global.scss";
 
 .accomplishments {
-  padding: 50px 20px 60px 20px;
+  padding: 50px global.$padding-inline-small 28px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 50px 0 100px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 100px 0 119px;
+  }
 }
 
 .accomplishments__list {

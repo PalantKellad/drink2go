@@ -6,6 +6,10 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: global.$width-medium) {
+    justify-content: flex-end;
+  }
 }
 
 .pagination__button {
@@ -18,7 +22,7 @@
   min-width: 40px;
   padding: 8px;
   text-decoration: none;
-  @include global.fonter(400, 16px, 24px);
+  font: 400 16px/24px var(--font-family);
   color: var(--color);
   background-color: var(--background-color);
   border: none;
@@ -28,6 +32,12 @@
   &--back {
     position: relative;
     font-size: 0;
+
+    @media (min-width: global.$width-medium) {
+      padding-left: 20px;
+      padding-right: 20px;
+      font: 400 16px/24px var(--font-family);
+    }
   }
 
   &--back::before {
@@ -42,11 +52,21 @@
     border-top: 2px solid var(--color);
     border-left: 2px solid var(--color);
     transform: translate(50%, -50%) rotate(-45deg);
+
+    @media (min-width: global.$width-medium) {
+      display: none;
+    }
   }
 
   &--forward {
     position: relative;
     font-size: 0;
+
+    @media (min-width: global.$width-medium) {
+      padding-left: 20px;
+      padding-right: 20px;
+      font: 400 16px/24px var(--font-family);
+    }
   }
 
   &--forward::before {
@@ -61,6 +81,10 @@
     border-top: 2px solid var(--color);
     border-left: 2px solid var(--color);
     transform: translate(50%, -50%) rotate(135deg);
+
+    @media (min-width: global.$width-medium) {
+      display: none;
+    }
   }
 
   &:hover {

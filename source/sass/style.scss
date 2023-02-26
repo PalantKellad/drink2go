@@ -1,11 +1,11 @@
 @use "global/global.scss";
 @use "blocks/page.scss";
 @use "blocks/main-header.scss";
+@use "blocks/toggle.scss";
 @use "blocks/main-navigation.scss";
 @use "blocks/image.scss";
 @use "blocks/main-menu.scss";
 @use "blocks/user-menu.scss";
-@use "blocks/toggle.scss";
 @use "blocks/main-hero.scss";
 @use "blocks/slide.scss";
 @use "blocks/button.scss";
@@ -24,3 +24,4 @@
 @use "blocks/range-slider.scss";
 @use "blocks/select.scss";
 @use "blocks/map.scss";
+@use "blocks/slider-pagination.scss";
